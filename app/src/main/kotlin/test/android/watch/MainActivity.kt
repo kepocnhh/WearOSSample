@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,12 +31,14 @@ class MainActivity : AppCompatActivity() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(48.dp)
+                        .background(Color.White)
                         .align(Alignment.Center)
                         .clickable {
                             showToast("click")
-                        },
+                        }
+                        .wrapContentHeight(Alignment.CenterVertically),
                     style = TextStyle(
-                        color = Color.Blue,
+                        color = Color.Black,
                         textAlign = TextAlign.Center
                     ),
                     text = "click me"
